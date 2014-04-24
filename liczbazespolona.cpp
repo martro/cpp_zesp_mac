@@ -81,6 +81,14 @@ LiczbaZespolona LiczbaZespolona:: operator *(const LiczbaZespolona &mnoznik)
 
 LiczbaZespolona& LiczbaZespolona:: operator *=(const LiczbaZespolona &mnoznik)
 {
+    double temp_re,temp_im;
+
+    temp_re=(this->re*mnoznik.re) - (this->im*mnoznik.im);
+    temp_im=(this->im*mnoznik.re) + (this->re*mnoznik.im);
+
+    this->re=(temp_re);
+    this->im=(temp_im);
+
     return *this;
 }
 

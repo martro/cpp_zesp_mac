@@ -11,7 +11,7 @@ int main()
     LiczbaZespolona c;
 
 
-    c=a*b;
+    a*=b;
 
     cout <<a;
     cout<<endl;
