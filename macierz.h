@@ -1,0 +1,6 @@
+#ifndef MACIERZ_H_INCLUDED
+#define MACIERZ_H_INCLUDED
+
+
+
+#endif // MACIERZ_H_INCLUDED
