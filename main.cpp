@@ -6,13 +6,12 @@ using namespace std;
 
 int main()
 {
-    LiczbaZespolona a(4,4);
-    LiczbaZespolona b(4,4);
+    LiczbaZespolona a(1,3);
+    LiczbaZespolona b(-3,4);
     LiczbaZespolona c;
 
-    a=a+a;
-    b+=b;
-    c=a-b;
+
+    c=a*b;
 
     cout <<a;
     cout<<endl;

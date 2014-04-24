@@ -26,6 +26,7 @@ public:
 
     LiczbaZespolona operator +(const LiczbaZespolona &dodawana);
     LiczbaZespolona & operator +=(const LiczbaZespolona & dodawana);
+
     LiczbaZespolona operator -(const LiczbaZespolona &odejmowana);
     LiczbaZespolona & operator -=(const LiczbaZespolona &odejmowana);
 

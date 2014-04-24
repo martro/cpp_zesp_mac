@@ -64,6 +64,27 @@ LiczbaZespolona& LiczbaZespolona:: operator -=(const LiczbaZespolona &odejmowana
     return *this;
 }
 
+LiczbaZespolona LiczbaZespolona:: operator *(const LiczbaZespolona &mnoznik)
+{
+    LiczbaZespolona temp;
+
+    double temp_re,temp_im;
+
+    temp_re=(this->re*mnoznik.re) - (this->im*mnoznik.im);
+    temp_im=(this->im*mnoznik.re) + (this->re*mnoznik.im);
+
+    temp.setRe(temp_re);
+    temp.setIm(temp_im);
+
+    return temp;
+}
+
+LiczbaZespolona& LiczbaZespolona:: operator *=(const LiczbaZespolona &mnoznik)
+{
+    return *this;
+}
+
+
 ostream &operator<< (ostream &str, const LiczbaZespolona &a)
 {
     if (a.im>=0)
