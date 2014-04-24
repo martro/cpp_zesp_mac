@@ -15,3 +15,19 @@
 
 1398333186 c:\users\martro\documents\github\zesp_cpp\macierz.h
 
+1398341874 source:c:\users\martro\documents\github\cpp_zesp_mac\liczbazespolona.cpp
+	"liczbazespolona.h"
+
+1398341823 c:\users\martro\documents\github\cpp_zesp_mac\liczbazespolona.h
+	<iostream>
+	<cmath>
+
+1398333181 source:c:\users\martro\documents\github\cpp_zesp_mac\macierz.cpp
+
+1398341908 source:c:\users\martro\documents\github\cpp_zesp_mac\main.cpp
+	<iostream>
+	"macierz.h"
+	"liczbazespolona.h"
+
+1398333186 c:\users\martro\documents\github\cpp_zesp_mac\macierz.h
+

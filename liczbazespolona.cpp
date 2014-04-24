@@ -40,14 +40,28 @@ double LiczbaZespolona::getIm()
 }
 
 
-LiczbaZespolona LiczbaZespolona:: operator +(LiczbaZespolona &dodawana)
+LiczbaZespolona LiczbaZespolona:: operator +(const LiczbaZespolona &dodawana)
 {
     return LiczbaZespolona(re+dodawana.re,im+dodawana.im);
 }
 
-LiczbaZespolona LiczbaZespolona:: operator -(LiczbaZespolona &odejmowana)
+LiczbaZespolona& LiczbaZespolona:: operator +=(const LiczbaZespolona &dodawana)
+{
+    re+=dodawana.re;
+    im+=dodawana.im;
+    return *this;
+}
+
+LiczbaZespolona LiczbaZespolona:: operator -( const LiczbaZespolona &odejmowana)
 {
     return LiczbaZespolona(re-odejmowana.re,im-odejmowana.im);
+}
+
+LiczbaZespolona& LiczbaZespolona:: operator -=(const LiczbaZespolona &odejmowana)
+{
+    re+=odejmowana.re;
+    im+=odejmowana.im;
+    return *this;
 }
 
 ostream &operator<< (ostream &str, const LiczbaZespolona &a)

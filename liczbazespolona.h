@@ -24,10 +24,13 @@ public:
 
 
 
-    LiczbaZespolona operator +(LiczbaZespolona &dodawana);
+    LiczbaZespolona operator +(const LiczbaZespolona &dodawana);
     LiczbaZespolona & operator +=(const LiczbaZespolona & dodawana);
-    LiczbaZespolona operator -(LiczbaZespolona &odejmowana);
+    LiczbaZespolona operator -(const LiczbaZespolona &odejmowana);
     LiczbaZespolona & operator -=(const LiczbaZespolona &odejmowana);
+
+    LiczbaZespolona operator *(const LiczbaZespolona &mnoznik);
+    LiczbaZespolona & operator *=(const LiczbaZespolona & mnoznik);
 
     friend ostream & operator << (ostream &str, const LiczbaZespolona &a);
     friend istream & operator >> (istream & str,LiczbaZespolona &a);

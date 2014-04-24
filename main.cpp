@@ -7,12 +7,12 @@ using namespace std;
 int main()
 {
     LiczbaZespolona a(4,4);
-    LiczbaZespolona b(2,10);
+    LiczbaZespolona b(4,4);
     LiczbaZespolona c;
 
+    a=a+a;
+    b+=b;
     c=a-b;
-
-    cin>>a;
 
     cout <<a;
     cout<<endl;
