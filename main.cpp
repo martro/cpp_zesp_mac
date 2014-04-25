@@ -6,47 +6,10 @@ using namespace std;
 
 int main()
 {
-    LiczbaZespolona a(1,3);
-    LiczbaZespolona b(2,6);
-    LiczbaZespolona c;
 
-    cout <<a;
-    cout<<endl;
+    Macierz a(2,4);
 
-    a=a*b;
-    cout <<a;
-    cout<<endl;
-
-    a/=b;
-    cout <<a;
-    cout<<endl;
-
-    c=b;
-    cout<<c;
-    cout<<endl;
-
-    cout <<a;
-    cout<<endl;
-
-
-
-    try{
-    c=a/b;
-    }catch(const char * err)
-        {
-            cout<<err<<endl;
-        }
-
-        try{
-    c=a/0;
-    }catch(const char * err)
-        {
-            cout<<err<<endl;
-        }
-
-    cout <<a;
-    cout<<endl;
-
+    cout<<a;
 
     /*try{
         LiczbaZespolona a(1,2);
@@ -110,6 +73,7 @@ int main()
         cout<<err<<endl;
     }
     */
+    cout<<"Program zakonczyl prace poprawnie. Trwa usuwanie zmiennych.\n";
     return 0;
 }
 
