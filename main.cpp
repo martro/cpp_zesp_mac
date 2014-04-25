@@ -7,14 +7,21 @@ using namespace std;
 int main()
 {
 
-    Macierz a(2,4);
+    Macierz a(3,3);
+    Macierz b(3,3);
+    Macierz c(3,3);
 
     a.wypelnij(2);
-    a.wypelnijJedynkami();
-    a.wypelnijZerami();
-    a.wypelnijLosowo();
+    b.wypelnij(5);
+    c.wypelnij(8);
 
-    cout<<a;
+
+
+
+    cout<<endl;
+    cout<<a<<endl<<"________________________"<<endl;
+    cout<<b<<endl<<"________________________"<<endl;
+    cout<<a+b<<endl<<"________________________"<<endl;
 
     /*try{
         LiczbaZespolona a(1,2);

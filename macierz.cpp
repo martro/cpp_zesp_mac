@@ -38,9 +38,27 @@
                 this->tablica[m][n] = rand()%10;
     }
 
+    void Macierz:: macierzJednostkowa()//trzeba dodac akcje w wypadku macierzy niekwadratowej
+    {
+        wypelnijZerami();
+        for (int m=0;m<this->m;m++)
+            this->tablica[m][m] = 1;
+    }
+
     void Macierz:: usun()
     {
         for (int m=0;m<this->m;m++)
             delete [] tablica[m];
         delete [] tablica;
+    }
+
+    Macierz Macierz:: operator + (const Macierz &dodawana)
+    {
+        Macierz temp(this->m,this->n);
+
+        for (int m=0; m<temp.m;m++)
+            for(int n=0;n<temp.n;n++)
+                temp.tablica[m][n]=tablica[m][n]+dodawana.tablica[m][n];
+
+        return temp;
     }
