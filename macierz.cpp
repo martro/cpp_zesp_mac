@@ -70,7 +70,18 @@
         return temp;
     }
 
-    Macierz Macierz:: operator = (const Macierz &kopiowana)
+        Macierz Macierz:: operator - (const Macierz &odejmowana)
+    {
+        Macierz temp(this->m,this->n);
+
+        for (int m=0; m<temp.m;m++)
+            for(int n=0;n<temp.n;n++)
+                temp.tablica[m][n]=tablica[m][n]-odejmowana.tablica[m][n];
+
+        return temp;
+    }
+
+    Macierz& Macierz:: operator = (const Macierz &kopiowana)
     {
         this->usun();
         this->m=kopiowana.m;
@@ -81,8 +92,5 @@
             for(int n=0;n<this->n;n++)
                 this->tablica[m][n]=kopiowana.tablica[m][n];
 
-
-
-
-        return 0;
+        return *this;
     }

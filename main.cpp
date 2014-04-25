@@ -15,7 +15,8 @@ int main()
     b.wypelnij(5);
     c.wypelnij(8);
 
-    c=a+b;
+    c=a-b;
+    c=c+a;
 
 
     cout<<endl;
