@@ -15,13 +15,13 @@ int main()
     b.wypelnij(5);
     c.wypelnij(8);
 
-
+    c=a+b;
 
 
     cout<<endl;
     cout<<a<<endl<<"________________________"<<endl;
     cout<<b<<endl<<"________________________"<<endl;
-    cout<<a+b<<endl<<"________________________"<<endl;
+    cout<<c<<endl<<"________________________"<<endl;
 
     /*try{
         LiczbaZespolona a(1,2);

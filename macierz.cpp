@@ -73,6 +73,13 @@
     Macierz Macierz:: operator = (const Macierz &kopiowana)
     {
         this->usun();
+        this->m=kopiowana.m;
+        this->n=kopiowana.n;
+        this->alokuj();
+
+        for (int m=0; m<this->m;m++)
+            for(int n=0;n<this->n;n++)
+                this->tablica[m][n]=kopiowana.tablica[m][n];
 
 
 
