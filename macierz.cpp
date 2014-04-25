@@ -52,6 +52,13 @@
         delete [] tablica;
     }
 
+    void Macierz:: alokuj()
+    {
+        tablica = new int* [this->m];
+        for(int m=0;m<this->m;m++)
+            tablica[m] = new int[this->n];
+    }
+
     Macierz Macierz:: operator + (const Macierz &dodawana)
     {
         Macierz temp(this->m,this->n);
@@ -61,4 +68,14 @@
                 temp.tablica[m][n]=tablica[m][n]+dodawana.tablica[m][n];
 
         return temp;
+    }
+
+    Macierz Macierz:: operator = (const Macierz &kopiowana)
+    {
+        this->usun();
+
+
+
+
+        return 0;
     }

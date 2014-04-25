@@ -16,9 +16,7 @@ private:
 public:
     Macierz(int m=1, int n=1):m(m), n(n)
     {
-        tablica = new int* [this->m];
-        for(int m=0;m<this->m;m++)
-            tablica[m] = new int[this->n];
+        alokuj();
     }
 
     ~Macierz()
@@ -32,9 +30,11 @@ public:
     void wypelnijZerami();
     void wypelnijLosowo();
     void macierzJednostkowa();
+    void alokuj();
     void usun();
 
     Macierz operator + (const Macierz &dodawana);
+    Macierz operator = (const Macierz &kopiowana);
 
 
     friend ostream &operator<< (ostream &str, const Macierz &r);
