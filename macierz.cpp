@@ -48,7 +48,8 @@ void Macierz:: alokuj()
 
 Macierz Macierz:: operator + (const Macierz &dodawana)
 {
-
+    if((this->m != dodawana.m) || (this->n != dodawana.n))
+        throw "Blad dodawania. Macierze nie maja tych samych wymiarow";
     Macierz temp(this->m,this->n);
 
     for (int m=0; m<temp.m; m++)
@@ -60,6 +61,8 @@ Macierz Macierz:: operator + (const Macierz &dodawana)
 
 Macierz& Macierz:: operator += (const Macierz &dodawana)
 {
+    if((this->m != dodawana.m) || (this->n != dodawana.n))
+        throw "Blad dodawania. Macierze nie maja tych samych wymiarow";
     for (int m=0; m<this->m; m++)
         for(int n=0; n<this->n; n++)
             this->tablica[m][n]=this->tablica[m][n]+dodawana.tablica[m][n];
@@ -69,6 +72,8 @@ Macierz& Macierz:: operator += (const Macierz &dodawana)
 
 Macierz Macierz:: operator - (const Macierz &odejmowana)
 {
+    if((this->m != odejmowana.m) || (this->n != odejmowana.n))
+        throw "Blad odejmowania. Macierze nie maja tych samych wymiarow";
     Macierz temp(this->m,this->n);
 
     for (int m=0; m<temp.m; m++)
@@ -80,6 +85,8 @@ Macierz Macierz:: operator - (const Macierz &odejmowana)
 
 Macierz& Macierz:: operator -= (const Macierz &odejmowana)
 {
+    if((this->m != odejmowana.m) || (this->n != odejmowana.n))
+        throw "Blad odejmowania. Macierze nie maja tych samych wymiarow";
     for (int m=0; m<this->m; m++)
         for(int n=0; n<this->n; n++)
             this->tablica[m][n]=this->tablica[m][n]-odejmowana.tablica[m][n];
@@ -89,6 +96,8 @@ Macierz& Macierz:: operator -= (const Macierz &odejmowana)
 
 Macierz Macierz:: operator * (const Macierz &mnoznik)
 {
+    if(this->n != mnoznik.m )
+        throw "Blad mnozenia. Wymiary macierzy musza byc w postaci: MxN i NxM";
     Macierz temp(this->m,mnoznik.n);
     temp.wypelnijZerami();
 
@@ -101,6 +110,8 @@ Macierz Macierz:: operator * (const Macierz &mnoznik)
 
 Macierz& Macierz:: operator *= (const Macierz &mnoznik)
 {
+    if(this->n != mnoznik.m )
+        throw "Blad mnozenia. Wymiary macierzy musza byc w postaci: MxN i NxM";
     Macierz temp(this->m,mnoznik.n);
     temp.wypelnijZerami();
 

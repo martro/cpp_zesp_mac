@@ -7,16 +7,21 @@ using namespace std;
 int main()
 {
 
-    Macierz a(5,5);
-    Macierz b(5,5);
-    Macierz c;
+    Macierz a(5,3);
+    Macierz b(5,3);
+    Macierz c(6,6);
 
     a.wypelnij(2);
     b.wypelnij(5);
+    c.wypelnij(0);
 
-    a*=a;
-    c=a;
-
+    try{
+    c=a+b;
+    }
+    catch (const char* err)
+    {
+        cout<<err;
+    }
 
     cout<<endl;
     cout<<a<<endl<<"________________________"<<endl;
