@@ -7,20 +7,45 @@ using namespace std;
 int main()
 {
     LiczbaZespolona a(1,3);
-    LiczbaZespolona b(-3,4);
+    LiczbaZespolona b(2,6);
     LiczbaZespolona c;
-
-
-    a*=b;
 
     cout <<a;
     cout<<endl;
-    cout <<a.modul();
-    cout<<endl;
-    cout<<b;
-    cout<<endl;
-    cout<<c;
 
+    a=a*b;
+    cout <<a;
+    cout<<endl;
+
+    a/=b;
+    cout <<a;
+    cout<<endl;
+
+    c=b;
+    cout<<c;
+    cout<<endl;
+
+    cout <<a;
+    cout<<endl;
+
+
+
+    try{
+    c=a/b;
+    }catch(const char * err)
+        {
+            cout<<err<<endl;
+        }
+
+        try{
+    c=a/0;
+    }catch(const char * err)
+        {
+            cout<<err<<endl;
+        }
+
+    cout <<a;
+    cout<<endl;
 
 
     /*try{

@@ -86,8 +86,51 @@ LiczbaZespolona& LiczbaZespolona:: operator *=(const LiczbaZespolona &mnoznik)
     temp_re=(this->re*mnoznik.re) - (this->im*mnoznik.im);
     temp_im=(this->im*mnoznik.re) + (this->re*mnoznik.im);
 
-    this->re=(temp_re);
-    this->im=(temp_im);
+    this->re=temp_re;
+    this->im=temp_im;
+
+    return *this;
+}
+
+LiczbaZespolona LiczbaZespolona:: operator /(const LiczbaZespolona &dzielnik)
+{
+    if(dzielnik.re==0 && dzielnik.im==0)
+    throw "Proba dzielenia przez 0. Liczba zespolona musi byc rozna od zera.";
+
+    LiczbaZespolona temp;
+    LiczbaZespolona dzielnik_sprz;
+
+    dzielnik_sprz.setRe(dzielnik.re);
+    dzielnik_sprz.setIm(-dzielnik.im);
+
+    temp=*this * dzielnik_sprz/pow(dzielnik_sprz.modul(),2);
+
+    return temp;
+}
+
+LiczbaZespolona LiczbaZespolona:: operator/ (const double &dzielnik)
+    {
+        if(dzielnik==0 )
+        throw "Proba dzielenia przez 0";
+        return LiczbaZespolona(this->re/dzielnik, this->im/dzielnik);
+    }
+
+
+LiczbaZespolona& LiczbaZespolona:: operator /=(const LiczbaZespolona &dzielnik)
+{
+    if(dzielnik.re==0 && dzielnik.im==0)
+    throw "Proba dzielenia przez 0. Liczba zespolona musi byc rozna od zera.";
+
+    LiczbaZespolona temp;
+    LiczbaZespolona dzielnik_sprz;
+
+    dzielnik_sprz.setRe(dzielnik.re);
+    dzielnik_sprz.setIm(-dzielnik.im);
+
+    temp=*this * dzielnik_sprz/pow(dzielnik_sprz.modul(),2);
+
+    this->re=temp.getRe();
+    this->im=temp.getIm();
 
     return *this;
 }

@@ -33,6 +33,10 @@ public:
     LiczbaZespolona operator *(const LiczbaZespolona &mnoznik);
     LiczbaZespolona & operator *=(const LiczbaZespolona & mnoznik);
 
+    LiczbaZespolona operator /(const LiczbaZespolona &dzielnik);
+    LiczbaZespolona operator /(const double &dzielnik);
+    LiczbaZespolona & operator /=(const LiczbaZespolona &dzielnik);
+
     friend ostream & operator << (ostream &str, const LiczbaZespolona &a);
     friend istream & operator >> (istream & str,LiczbaZespolona &a);
 };
