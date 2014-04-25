@@ -10,6 +10,9 @@ int main()
     Macierz a(2,4);
 
     a.wypelnij(2);
+    a.wypelnijJedynkami();
+    a.wypelnijZerami();
+    a.wypelnijLosowo();
 
     cout<<a;
 
