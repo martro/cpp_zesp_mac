@@ -8,22 +8,18 @@ int main()
 {
 
     Macierz a(3,5);
-    Macierz b(3,5);
-    Macierz c(3,5);
+    Macierz b(5,3);
+    Macierz c;
 
     a.wypelnij(2);
     b.wypelnij(5);
-    c.wypelnij(8);
 
-    c+=a;
-    c+=b;
-    c-=a;
 
 
     cout<<endl;
     cout<<a<<endl<<"________________________"<<endl;
     cout<<b<<endl<<"________________________"<<endl;
-    cout<<c<<endl<<"________________________"<<endl;
+    cout<<a*b<<endl<<"________________________"<<endl;
 
     /*try{
         LiczbaZespolona a(1,2);
@@ -76,12 +72,12 @@ int main()
         }
         i.wypelnijLosowo();
         cout<<i;
-	Macierz<LiczbaZespolona> l(3,3);
-	l.wypelnijJedynkami();
-	Macierz<LiczbaZespolona> m(3,3);
-	m.macierzJednostkowa();
-	l+=l;
-	cout<<l*m<<endl;
+    Macierz<LiczbaZespolona> l(3,3);
+    l.wypelnijJedynkami();
+    Macierz<LiczbaZespolona> m(3,3);
+    m.macierzJednostkowa();
+    l+=l;
+    cout<<l*m<<endl;
     }catch(const char * err)
     {
         cout<<err<<endl;

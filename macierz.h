@@ -37,6 +37,8 @@ public:
     Macierz& operator += (const Macierz &dodawana);
     Macierz operator - (const Macierz &odejmowana);
     Macierz& operator -= (const Macierz &odejmowana);
+    Macierz operator * (const Macierz &mnoznik);
+    Macierz& operator *= (const Macierz &mnoznik);
     Macierz& operator = (const Macierz &kopiowana);
 
 
