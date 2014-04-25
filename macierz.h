@@ -34,7 +34,9 @@ public:
     void usun();
 
     Macierz operator + (const Macierz &dodawana);
+    Macierz& operator += (const Macierz &dodawana);
     Macierz operator - (const Macierz &odejmowana);
+    Macierz& operator -= (const Macierz &odejmowana);
     Macierz& operator = (const Macierz &kopiowana);
 
 

@@ -22,15 +22,15 @@
 	<iostream>
 	<cmath>
 
-1398461555 source:c:\users\martro\documents\github\cpp_zesp_mac\macierz.cpp
+1398462185 source:c:\users\martro\documents\github\cpp_zesp_mac\macierz.cpp
 	"macierz.h"
 
-1398461605 source:c:\users\martro\documents\github\cpp_zesp_mac\main.cpp
+1398462120 source:c:\users\martro\documents\github\cpp_zesp_mac\main.cpp
 	<iostream>
 	"macierz.h"
 	"liczbazespolona.h"
 
-1398461510 c:\users\martro\documents\github\cpp_zesp_mac\macierz.h
+1398462151 c:\users\martro\documents\github\cpp_zesp_mac\macierz.h
 	<iostream>
 	<cstdlib>
 	<ctime>

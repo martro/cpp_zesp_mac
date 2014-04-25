@@ -7,16 +7,17 @@ using namespace std;
 int main()
 {
 
-    Macierz a(3,3);
-    Macierz b(3,3);
-    Macierz c(3,3);
+    Macierz a(3,5);
+    Macierz b(3,5);
+    Macierz c(3,5);
 
     a.wypelnij(2);
     b.wypelnij(5);
     c.wypelnij(8);
 
-    c=a-b;
-    c=c+a;
+    c+=a;
+    c+=b;
+    c-=a;
 
 
     cout<<endl;
