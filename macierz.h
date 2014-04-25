@@ -1,6 +1,8 @@
 #ifndef MACIERZ_H_INCLUDED
 #define MACIERZ_H_INCLUDED
 
+#include <iostream>
+
 using namespace std;
 
 class Macierz
@@ -19,25 +21,15 @@ public:
 
     ~Macierz()
     {
-        cout<<"dupdup";
+        usun();
+        cout<<"Usunieto macierz.";
     }
 
-    void wyswietl()
-    {
-        cout<<"asdasda";
-    }
+    void wypelnij(int a);
+    void usun();
 
-    friend ostream &operator<< (ostream &str, const Macierz &r)
-    {
-        for(int i=0;i<r.m;i++){
-            for(int j=0;j<r.n;j++){
-                str<<r.tablica[i][j]<<"\t";
-            }
-            str<<endl;
-        }
 
-    return str;
-    }
+    friend ostream &operator<< (ostream &str, const Macierz &r);
 };
 
 #endif // MACIERZ_H_INCLUDED

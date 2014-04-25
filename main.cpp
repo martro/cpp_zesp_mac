@@ -9,6 +9,8 @@ int main()
 
     Macierz a(2,4);
 
+    a.wypelnij(2);
+
     cout<<a;
 
     /*try{
