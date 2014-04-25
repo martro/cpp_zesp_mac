@@ -96,14 +96,26 @@ Macierz Macierz:: operator * (const Macierz &mnoznik)
             for(int x=0; x<temp.n; x++)
                 for(int i=0; i<mnoznik.m; i++)
                     temp.tablica[y][x] += (this->tablica[y][i] * mnoznik.tablica[i][x]);
-
-    cout<<temp<<"okokoko";
     return temp;
 }
 
 Macierz& Macierz:: operator *= (const Macierz &mnoznik)
 {
+    Macierz temp(this->m,mnoznik.n);
+    temp.wypelnijZerami();
 
+        for(int y=0; y<temp.m; y++)
+            for(int x=0; x<temp.n; x++)
+                for(int i=0; i<mnoznik.m; i++)
+                    temp.tablica[y][x] += (this->tablica[y][i] * mnoznik.tablica[i][x]);
+    this->usun();
+    this->m=temp.m;
+    this->n=temp.n;
+    this->alokuj();
+
+    *this=temp;
+
+    return *this;
 }
 
 Macierz& Macierz:: operator = (const Macierz &kopiowana)

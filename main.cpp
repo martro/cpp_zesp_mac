@@ -7,19 +7,21 @@ using namespace std;
 int main()
 {
 
-    Macierz a(3,5);
-    Macierz b(5,3);
+    Macierz a(5,5);
+    Macierz b(5,5);
     Macierz c;
 
     a.wypelnij(2);
     b.wypelnij(5);
 
+    a*=a;
+    c=a;
 
 
     cout<<endl;
     cout<<a<<endl<<"________________________"<<endl;
     cout<<b<<endl<<"________________________"<<endl;
-    cout<<a*b<<endl<<"________________________"<<endl;
+    cout<<c<<endl<<"________________________"<<endl;
 
     /*try{
         LiczbaZespolona a(1,2);
