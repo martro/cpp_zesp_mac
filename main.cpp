@@ -7,35 +7,7 @@ using namespace std;
 
 int main()
 {
-
-    Macierz<LiczbaZespolona> a(5,3);
-    Macierz<LiczbaZespolona> b(3,5);
-    Macierz<LiczbaZespolona> c(6,6);
-
     try{
-    a.macierzJednostkowa();
-    }
-    catch (const char* err)
-    {
-        cout<<err;
-    }
-    b.wypelnij(5);
-    c.wypelnij(0);
-
-    try{
-    c=a+b;
-    }
-    catch (const char* err)
-    {
-        cout<<err;
-    }
-
-    cout<<endl;
-    cout<<a<<endl<<"________________________"<<endl;
-    cout<<b<<endl<<"________________________"<<endl;
-    cout<<c<<endl<<"________________________"<<endl;
-
-    /*try{
         LiczbaZespolona a(1,2);
         LiczbaZespolona b(0);
         LiczbaZespolona c(-1,-1);
@@ -61,6 +33,7 @@ int main()
         Macierz<double> i(2,3);
         Macierz<double> j(2,3);
         Macierz<double> k(3,2);
+
         try{
             Macierz<double> macierz(-1,0);
             cout<<macierz<<endl;
@@ -71,6 +44,7 @@ int main()
         i.wypelnijJedynkami();
         j.wypelnijJedynkami();
         k.wypelnijJedynkami();
+
         cout<<i+j<<endl;
         cout<<i-j+i<<endl;
         i=j;
@@ -96,7 +70,7 @@ int main()
     {
         cout<<err<<endl;
     }
-    */
+
     cout<<"Program zakonczyl prace poprawnie. Trwa usuwanie zmiennych.\n";
     return 0;
 }

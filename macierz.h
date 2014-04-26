@@ -25,6 +25,8 @@ private:
 public:
     Macierz(int m=1, int n=1):m(m), n(n)
     {
+        if ((m<=0)||(n<=0))
+            throw "Blad. Tworzona macierz musi miec wymiary dodatnie.";
         this->alokuj();
     }
 
@@ -204,6 +206,7 @@ Macierz<T>& Macierz<T>:: operator = (const Macierz &kopiowana)
 template <class T>
 ostream &operator<< (ostream &str, const Macierz<T> &a)
 {
+    str<<endl;
     for(int m=0; m<a.m; m++)
     {
         for(int n=0; n<a.n; n++)
