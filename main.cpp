@@ -2,16 +2,23 @@
 #include "macierz.h"
 #include "liczbazespolona.h"
 
+
 using namespace std;
 
 int main()
 {
 
-    Macierz a(5,3);
-    Macierz b(5,3);
-    Macierz c(6,6);
+    Macierz<LiczbaZespolona> a(5,3);
+    Macierz<LiczbaZespolona> b(3,5);
+    Macierz<LiczbaZespolona> c(6,6);
 
-    a.wypelnij(2);
+    try{
+    a.macierzJednostkowa();
+    }
+    catch (const char* err)
+    {
+        cout<<err;
+    }
     b.wypelnij(5);
     c.wypelnij(0);
 
