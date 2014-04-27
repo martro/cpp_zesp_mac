@@ -59,8 +59,8 @@ LiczbaZespolona LiczbaZespolona:: operator -( const LiczbaZespolona &odejmowana)
 
 LiczbaZespolona& LiczbaZespolona:: operator -=(const LiczbaZespolona &odejmowana)
 {
-    re+=odejmowana.re;
-    im+=odejmowana.im;
+    re-=odejmowana.re;
+    im-=odejmowana.im;
     return *this;
 }
 

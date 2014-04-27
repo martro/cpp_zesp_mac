@@ -15,7 +15,7 @@
 
 1398333186 c:\users\martro\documents\github\zesp_cpp\macierz.h
 
-1398441375 source:c:\users\martro\documents\github\cpp_zesp_mac\liczbazespolona.cpp
+1398607818 source:c:\users\martro\documents\github\cpp_zesp_mac\liczbazespolona.cpp
 	"liczbazespolona.h"
 
 1398374035 c:\users\martro\documents\github\cpp_zesp_mac\liczbazespolona.h
@@ -25,7 +25,7 @@
 1398470522 source:c:\users\martro\documents\github\cpp_zesp_mac\macierz.cpp
 	"macierz.h"
 
-1398471365 source:c:\users\martro\documents\github\cpp_zesp_mac\main.cpp
+1398607041 source:c:\users\martro\documents\github\cpp_zesp_mac\main.cpp
 	<iostream>
 	"macierz.h"
 	"liczbazespolona.h"

@@ -2,7 +2,6 @@
 #include "macierz.h"
 #include "liczbazespolona.h"
 
-
 using namespace std;
 
 int main()
@@ -33,7 +32,6 @@ int main()
         Macierz<double> i(2,3);
         Macierz<double> j(2,3);
         Macierz<double> k(3,2);
-
         try{
             Macierz<double> macierz(-1,0);
             cout<<macierz<<endl;
@@ -44,7 +42,6 @@ int main()
         i.wypelnijJedynkami();
         j.wypelnijJedynkami();
         k.wypelnijJedynkami();
-
         cout<<i+j<<endl;
         cout<<i-j+i<<endl;
         i=j;
@@ -60,19 +57,17 @@ int main()
         }
         i.wypelnijLosowo();
         cout<<i;
-    Macierz<LiczbaZespolona> l(3,3);
-    l.wypelnijJedynkami();
-    Macierz<LiczbaZespolona> m(3,3);
-    m.macierzJednostkowa();
-    l+=l;
-    cout<<l*m<<endl;
+	Macierz<LiczbaZespolona> l(3,3);
+	l.wypelnijJedynkami();
+	Macierz<LiczbaZespolona> m(3,3);
+	m.macierzJednostkowa();
+	l+=l;
+	cout<<l*m<<endl;
     }catch(const char * err)
     {
         cout<<err<<endl;
     }
 
-    cout<<"Program zakonczyl prace poprawnie. Trwa usuwanie zmiennych.\n";
     return 0;
 }
-
 
