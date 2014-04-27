@@ -33,7 +33,6 @@ public:
     ~Macierz()
     {
         usun();
-        cout<<"Usunieto macierz.";
     }
 
     void wypelnij(T a);
