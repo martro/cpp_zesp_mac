@@ -34,7 +34,6 @@
 		</Compiler>
 		<Unit filename="liczbazespolona.cpp" />
 		<Unit filename="liczbazespolona.h" />
-		<Unit filename="macierz.cpp" />
 		<Unit filename="macierz.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
